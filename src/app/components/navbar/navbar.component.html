@@ -1,0 +1,26 @@
+
+
+<div class="container sticky-top img-responsive">
+  <nav class="navbar navbar-expand-lg navbar navbar-light " style="background-color: #ffffff;">
+    <a class="navbar-brand" href="#">
+      <img src="img/Blogger.png" alt="logo_blog">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
+      <ul class="navbar-nav">
+         <!-- Begin Link -->
+        <li class="nav-item" ng-repeat="link in $ctrl.pages track by $index">
+          <a class="nav-link" ng-attr-ui-sref="{{ link.route ? link.route : false }}">
+            {{ link.name }}
+          </a>
+        </li>
+        <!-- End Link -->
+      </ul>
+    </div>
+    <!-- End Link Section -->
+</nav>
+</div>

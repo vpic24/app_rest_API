@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Meta tag -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+            <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+            <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+            <link rel="stylesheet" type="text/css" href="css/util.css">
+            <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- Default Style -->
+        <link rel="stylesheet" href="./src/styles.css">
+        <title>Blog | Demo</title>
+    </head>
+    <body ng-controller="AppController as app">
+
+        <!-- Navbar -->
+        <navbar-component pages="app.pages"></navbar-component>
+            <!-- main content -->
+            <div class="container">
+                <ui-view></ui-view>
+            </div>
+
+
+
+
+        <!-- Lib -->
+        <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+        <script src="./node_modules/angular/angular.js"></script>
+        <script src="./node_modules/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+        <script src="./node_modules/oclazyload/dist/ocLazyLoad.min.js"></script>
+
+        <!-- App -->
+        <script src="src/app/app.module.js"></script>
+        <script src="src/app/app.controller.js"></script>
+        <script src="src/app/app.page.html"></script>
+        <script src="src/app/app.routing.js"></script>
+        <!-- User -->
+        <script src="src/app/users/user.controller.js"></script>
+        <script src="/src/app/users/user.service.js"></script>
+        <!-- User Details -->
+        <script src="src/app/details_users/user-details.controller.js"></script>
+        <script src="src/app/details_users/det.service.js"></script>
+        <!-- Home -->
+        <script src="src/app/home/home.controller.js"></script>
+        <script src="src/app/home/home.service.js"></script>
+        <!-- Posts -->
+        <script src="src/app/posts/post.service.js"></script>
+        <!-- Post Detail -->
+        <script src="src/app/posts/detail/post-details.controller.js"></script>
+
+        <!-- Components -->
+        <script src="src/app/components/navbar/navbar.controller.js"></script>
+        <script src="src/app/components/navbar/navbar.component.js"></script>
+
+        <!-- Main -->
+        <script src="src/main.js"></script>
+    </body>
+</html>

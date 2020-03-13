@@ -1,0 +1,30 @@
+<h1 class="mt-4">Home</h1>
+<h2>Post del blog demo</h2>
+
+
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table">
+
+        <div class="row header">
+          <div class="cell">
+            ID Utente
+          </div>
+          <div class="cell">
+            Titolo Del Post
+          </div>
+        </div>
+
+        <div class="row" ng-repeat="info in home.todoList track by $index" ng-click="home.goToUserDetail(info.id)">
+          <div class="cell" data-title="id">
+            {{ info.id }}
+          </div>
+          <div class="cell" data-title="Titolo">
+            {{ info.title }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

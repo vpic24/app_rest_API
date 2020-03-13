@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="src\app\posts\detail\post-details.css">
+
+<div class="limiter">
+  <div class="container-table100">
+    <div class="wrap-table100">
+      <div class="table">
+
+        <div class="row header">
+          <div class="cell">
+            PostID
+          </div>
+          <div class="cell">
+            Title
+          </div>
+          <div class="cell">
+            Contenuto
+          </div>
+        </div>
+
+        <div class="row" ng-repeat="item in postDetail.posts track by $index">
+          <div class="cell" data-title="id">
+            {{ item.id }}
+          </div>
+          <div class="cell" data-title="Titolo">
+            {{ item.title }}
+          </div>
+          <div class="cell" data-title="Contenuto">
+            {{ item.body }}
+          </div>
+        </div>
+        <div class="row" ng-if="postDetail.posts.length === 0">
+
+          <div class="cell">
+            <i>Non ci sono post associati all'utente con id {{ postDetail.userId }}</i>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

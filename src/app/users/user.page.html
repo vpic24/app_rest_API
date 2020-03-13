@@ -1,0 +1,27 @@
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table">
+
+                <div class="row header">
+                    <div class="cell">
+                        ID Utente
+                    </div>
+                    <div class="cell">
+                        UserName
+                    </div>
+                </div>
+
+                <div class="row" ng-repeat="info in user.userList track by $index"
+                    ng-click=" user.goToUserByID(info.id)">
+                    <div class="cell" data-title="id">
+                        {{ info.id }}
+                    </div>
+                    <div class="cell" data-title="Username">
+                        @{{ info.username }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
