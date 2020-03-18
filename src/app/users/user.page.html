@@ -1,10 +1,12 @@
 <h1 class="mt-4">Users</h1>
 <h2><i>Lista Utenti del Blog</i></h2>
 
+<div spinner ng-if="user.userList.length == 0" ></div>
+
 <div class="limiter">
     <div class="container-table100">
         <div class="wrap-table100">
-            <div class="table">
+            <div class="table" ng-if="user.userList.length > 0" >
 
                 <div class="row header">
                     <div class="cell">
@@ -15,8 +17,9 @@
                     </div>
                 </div>
 
-                <div class="row" ng-repeat="info in user.userList track by $index"
-                    ng-click=" user.goToUserByID(info.id)">
+                <div class="row" 
+                ng-repeat="info in user.userList track by $index"
+                ng-click=" user.goToUserByID(info.id)">
                     <div class="cell" data-title="id">
                         {{ info.id }}
                     </div>
