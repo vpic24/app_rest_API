@@ -7,7 +7,7 @@
         <div class="wrap-table100">
             <div class="table">
 
-                <div class="row header">
+                <div class="row header" style="cursor: no-drop">
                     <div class="cell">
                         UserName
                     </div>
@@ -25,6 +25,7 @@
                 </div>
 
                 <div class="row" ng-repeat="item in userDetails.info track by $index"
+                    style="cursor: no-drop"
                     ng-click=" user.goToUserByID(info.id)">
                     <div class="cell" data-title="UserName">
                         @{{ item.username }}
