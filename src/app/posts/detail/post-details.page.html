@@ -3,6 +3,8 @@
 <h1 class="mt-4">Post Details</h1>
 <h2><i>Post dell'utente</i></h2>
 
+<div spinner ng-if="postDetail.posts.length === 0"></div>
+
 <div class="limiter">
   <div class="container-table100">
     <div class="wrap-table100">
@@ -30,14 +32,6 @@
           <div class="cell" data-title="Contenuto">
             {{ item.body }}
           </div>
-        </div>
-        <div class="row" ng-if="postDetail.posts.length === 0">
-
-          <div class="cell">
-            <i>Non ci sono post associati all'utente con id {{ postDetail.userId }}</i>
-
-          </div>
-
         </div>
 
       </div>
